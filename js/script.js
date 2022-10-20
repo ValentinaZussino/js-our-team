@@ -79,3 +79,33 @@ for (let elements of teamMembers){
     // la appendo
     container.append(cards);
 }
+
+// INSERIMENTO NUOVA CARD 
+// faccio inserire input a utente x nome e ruolo
+// al click devo:
+// prendere il value degli input
+// --> i value devono corrispondere ai rispettivi in un nuovo ogg 
+// quindi creo variabili per gli input.value
+// e oggetto da riempire con quelle varibili 
+// foto la inserisco io 
+// ora usare la funzione x creare cards
+// appendo funzione al container
+
+const nameUserInput = document.getElementById('user-name');
+const roleUserInput = document.getElementById('user-role');
+const btnJoin = document.querySelector('button');
+btnJoin.addEventListener('click', newObjectGenerator);
+
+function newObjectGenerator(){
+    const nameUserValue = nameUserInput.value;
+    const roleUserValue = roleUserInput.value;
+    const newObject = {
+        nome: `${nameUserValue}`,
+        ruolo: `${roleUserValue}`,
+        foto: '<img src="./img/wayne-barnett-founder-ceo.jpg" alt=""></img>',
+    }
+    const lastCard = cardsGenerator(newObject);
+    container.append(lastCard);
+    nameUserInput.value = '';
+    roleUserInput.value ='';
+}
