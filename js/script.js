@@ -13,7 +13,7 @@
 // BONUS 3:
 // Aggiungere attraverso un form un membro al team
 
-// MILESTONE 2
+// BONUS 2
 // creo array di oggetti
 const teamMembers = [
     {
@@ -48,25 +48,34 @@ const teamMembers = [
     }
 ]
 // prendo il container
-const container = document.querySelector('.team-container')
+const container = document.querySelector('.team-container');
 
 // creo un div card dentro il quale appendo div img e div x i 2 span testo
 // per stampare i valori uso ciclo for
-for(let value of teamMembers){ 
-    const card = document.createElement('div');
-    card.className = 'col-md-4 col-sm-12 d-flex flex-column text-center';
-    const imgDiv = document.createElement('div');
-    imgDiv.className = 'card-img text-center mb-3 mt-5';
-    imgDiv.innerHTML = value.foto;
-    card.appendChild(imgDiv);
-    const divTxt = document.createElement('div');
-    divTxt.className = ''
-    divTxt.innerHTML = `
-    <span class='fw-bold'>${value.nome}</span>   
-    <br>
-    <span>${value.ruolo}</span>
-    `;
-    card.appendChild(divTxt);
-    container.appendChild(card);
+// for(let value of teamMembers){ 
+//     const card = document.createElement('div');
+//     card.className = 'col-md-4 col-sm-12 d-flex flex-column text-center';
+//     const imgDiv = document.createElement('div');
+//     imgDiv.className = 'card-img text-center mb-3 mt-5';
+//     imgDiv.innerHTML = value.foto;
+//     card.appendChild(imgDiv);
+//     const divTxt = document.createElement('div');
+//     divTxt.className = ''
+//     divTxt.innerHTML = `
+//     <span class='fw-bold'>${value.nome}</span>   
+//     <br>
+//     <span>${value.ruolo}</span>
+//     `;
+//     card.appendChild(divTxt);
+//     container.appendChild(card);
+// }
+
+
+// PROVA CON FUNZIONE
+// creo ciclo for per iterare su oggetti in array e far eseguire la funzione sui singoli oggetti appunto
+for (let elements of teamMembers){
+    // eseguo funzione sui singoli oggetti e la memorizzo per appenderla
+    const cards = cardsGenerator(elements);
+    // la appendo
+    container.append(cards);
 }
-// per dopo modif con key per poter inserire nuovo membro e provare con funzione
