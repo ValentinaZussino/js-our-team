@@ -54,7 +54,7 @@ const container = document.querySelector('.team-container')
 // per stampare i valori uso ciclo for
 for(let value of teamMembers){ 
     const card = document.createElement('div');
-    card.className = 'col-lg-4 d-flex flex-column text-center';
+    card.className = 'col-md-4 col-sm-12 d-flex flex-column text-center';
     const imgDiv = document.createElement('div');
     imgDiv.className = 'card-img text-center mb-3 mt-5';
     imgDiv.innerHTML = value.foto;
@@ -64,7 +64,7 @@ for(let value of teamMembers){
     divTxt.innerHTML = `
     <span class='fw-bold'>${value.nome}</span>   
     <br>
-    <span>Ruolo:${value.ruolo}</span>
+    <span>${value.ruolo}</span>
     `;
     card.appendChild(divTxt);
     container.appendChild(card);
