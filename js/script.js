@@ -19,32 +19,32 @@ const teamMembers = [
     {
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO',
-        foto: 'wayne-barnett-founder-ceo.jpg',
+        foto: '<img src="./img/wayne-barnett-founder-ceo.jpg" alt=""></img>',
     },
     {
         nome: 'Angela Caroll',
         ruolo: 'Chief Editor',
-        foto: 'angelo-caroll-chief-editor.jpg',
+        foto: '<img src="./img/angela-caroll-chief-editor.jpg" alt="">',
     },
     {
         nome: 'Walter Gordon',
         ruolo: 'Office Menager',
-        foto: 'walter-gordon-office-menager.jpg',
+        foto: '<img src="./img/walter-gordon-office-manager.jpg" alt="">',
     },
     {
         nome: 'Angela Lopez',
         ruolo: 'Social Media Menager',
-        foto: 'angela-lopez-social-media-menager.jpg',
+        foto: '<img src="./img/angela-lopez-social-media-manager.jpg" alt="">',
     },
     {
         nome: 'Scott Estrada',
         ruolo: 'Developer',
-        foto: 'scott-estrada-developer.jpg',
+        foto: '<img src="./img/scott-estrada-developer.jpg" alt="">',
     },
     {
         nome: 'Barbara Ramos',
         ruolo: 'Graphic Designer',
-        foto: 'barbara-ramos-graphic-designer.jpg',
+        foto: '<img src="./img/barbara-ramos-graphic-designer.jpg" alt="">',
     }
 ]
 // prendo p per poi stampare dentro
