@@ -47,9 +47,26 @@ const teamMembers = [
         foto: '<img src="./img/barbara-ramos-graphic-designer.jpg" alt="">',
     }
 ]
-// prendo p per poi stampare dentro
-const htmlP = document.querySelector('p');
-// per stampare i valori in console uso ciclo for
+// prendo il container
+const container = document.querySelector('.team-container')
+
+// creo un div card dentro il quale appendo div img e div x i 2 span testo
+// per stampare i valori uso ciclo for
 for(let value of teamMembers){ 
-    htmlP.innerHTML += 'nome: ' + value.nome + ', ruolo: ' + value.ruolo + ', foto: ' + value.foto;
+    const card = document.createElement('div');
+    card.className = 'col-lg-4 d-flex flex-column text-center';
+    const imgDiv = document.createElement('div');
+    imgDiv.className = 'card-img text-center mb-3 mt-5';
+    imgDiv.innerHTML = value.foto;
+    card.appendChild(imgDiv);
+    const divTxt = document.createElement('div');
+    divTxt.className = ''
+    divTxt.innerHTML = `
+    <span class='fw-bold'>${value.nome}</span>   
+    <br>
+    <span>Ruolo:${value.ruolo}</span>
+    `;
+    card.appendChild(divTxt);
+    container.appendChild(card);
 }
+// per dopo modif con key per poter inserire nuovo membro e provare con funzione
