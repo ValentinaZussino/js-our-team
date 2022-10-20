@@ -20,11 +20,35 @@ const teamMembers = [
         nome: 'Wayne Barnett',
         ruolo: 'Founder & CEO',
         foto: 'wayne-barnett-founder-ceo.jpg',
+    },
+    {
+        nome: 'Angela Caroll',
+        ruolo: 'Chief Editor',
+        foto: 'angelo-caroll-chief-editor.jpg',
+    },
+    {
+        nome: 'Walter Gordon',
+        ruolo: 'Office Menager',
+        foto: 'walter-gordon-office-menager.jpg',
+    },
+    {
+        nome: 'Angela Lopez',
+        ruolo: 'Social Media Menager',
+        foto: 'angela-lopez-social-media-menager.jpg',
+    },
+    {
+        nome: 'Scott Estrada',
+        ruolo: 'Developer',
+        foto: 'scott-estrada-developer.jpg',
+    },
+    {
+        nome: 'Barbara Ramos',
+        ruolo: 'Graphic Designer',
+        foto: 'barbara-ramos-graphic-designer.jpg',
     }
-    // {}
 ]
 
 // per stampare i valori in console uso ciclo for
 for(let value of teamMembers){
-    console.log(value.nome + value.ruolo + value.foto)
+    console.log('nome: ' + value.nome + ', ruolo: ' + value.ruolo + ', foto: ' + value.foto)
 }
