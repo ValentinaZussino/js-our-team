@@ -13,7 +13,7 @@
 // BONUS 3:
 // Aggiungere attraverso un form un membro al team
 
-// MILESTONE 1
+// MILESTONE 2
 // creo array di oggetti
 const teamMembers = [
     {
@@ -47,8 +47,9 @@ const teamMembers = [
         foto: 'barbara-ramos-graphic-designer.jpg',
     }
 ]
-
+// prendo p per poi stampare dentro
+const htmlP = document.querySelector('p');
 // per stampare i valori in console uso ciclo for
-for(let value of teamMembers){
-    console.log('nome: ' + value.nome + ', ruolo: ' + value.ruolo + ', foto: ' + value.foto)
+for(let value of teamMembers){ 
+    htmlP.innerHTML += 'nome: ' + value.nome + ', ruolo: ' + value.ruolo + ', foto: ' + value.foto;
 }
