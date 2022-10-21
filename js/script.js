@@ -104,6 +104,8 @@ function newObjectGenerator(){
         ruolo: `${roleUserValue}`,
         foto: '<img src="./img/wayne-barnett-founder-ceo.jpg" alt=""></img>',
     }
+    teamMembers.push(newObject);
+    console.log(teamMembers);
     const lastCard = cardsGenerator(newObject);
     container.append(lastCard);
     nameUserInput.value = '';
